@@ -1,5 +1,5 @@
 h1{
-  color: blue;
+  color: black;
   background-color: white;
 }
 
@@ -20,7 +20,7 @@ input {
 }
 
 body {
-  padding-top:100px;
+  padding-top: 100px;
 }
 
 .wbdv-sticky-header {
