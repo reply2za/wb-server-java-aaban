@@ -15,6 +15,7 @@ input {
 
 .wbdv-bottom-right-fixed {
   position: fixed;
+  color: red;
   right: 15px;
   bottom: 15px;
 }
@@ -25,7 +26,8 @@ body {
 
 .wbdv-sticky-header {
   position: fixed;
-  background: lightgoldenrodyellow;
+  background: cornflowerblue;
+  color: white;
   top: 0;
   left: 0;
   right: 0;
@@ -41,3 +43,13 @@ body {
   padding-top: 10px;
   padding-right: 10px;
 }
+
+.wbdv-file-icon-style {
+  color: dodgerblue;
+}
+
+.wbdv-circle-add-style {
+  color: darkred;
+}
+
+
