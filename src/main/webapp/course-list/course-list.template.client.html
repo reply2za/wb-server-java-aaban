@@ -6,21 +6,25 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link href="../css/styles.css" rel="stylesheet"/>
+  <link href="course-list.style.client.css" rel="stylesheet"/>
 </head>
-<body>
+<body class="wbdv-page-background">
 <div class="container" >
-<h1 class="wbdv-sticky-header">
+<h1 class="wbdv-sticky-header" >
+  <div class="form-group row">
 <!--  Menu bar-->
-  <i class="fas fa-bars wbdv-padding-left-10px"></i>
-  Course Manager
-<input/>
-<!--  Circles -->
+  <i class="fas fa-bars wbdv-padding-left-header"></i>
+  <label for="headerSearch" class="wbdv-header-menu-icon" >Course Manager</label>
+<!--    Search Bar-->
+  <input id="headerSearch" placeholder="New Course Title" class="form-control col-sm-6 wbdv-header-search-bar"/>
+  <!--  Circles -->
   <i class="wbdv-add-course-header-styling fas fa-plus-circle wbdv-circle-add-style" ></i>
   <i class="wbdv-bottom-right-fixed fas fa-plus-circle wbdv-circle-add-style" ></i>
+  </div>
 </h1>
 
 <!--  Table header -->
-<table class="table">
+<table class="table form-group ">
   <thead>
   <tr>
     <th>Title</th>
@@ -31,116 +35,273 @@
   </thead>
 
 <!--  Table body -->
-  <tbody>
+  <tbody class="wbdv-table-background">
+<!--  Table row -->
   <tr>
     <td>
-<!--      File icon -->
+        <!--      File icon -->
       <i class="fas fa-file-alt wbdv-file-icon-style" ></i>
-      <a href="../course-editor/course-editor.template.client.html" >
+      <a href="../course-editor/course-editor.template.client.html"
+         class="wbdv-document-table-text-style wbdv-course-editor wbdv-close" >
         CS4550
       </a>
     </td>
-    <td>Jose</td>
-    <td>10:05am</td>
-    <td><i class="fas fa-trash"></i></td>
+    <td>me</td>
+    <td class>6:45 PM</td>
+    <td><i class="fas fa-times"></i></td>
   </tr>
-  <tr>
-    <td>CS5000</td>
-    <td>Jose</td>
-    <td>10:05am</td>
-    <td><button>Delete</button></td>
-  </tr> <tr>
-    <td>CS4550</td>
-    <td>Jose</td>
-    <td>10:05am</td>
-    <td><button>Delete</button></td>
-  </tr>
-  <tr>
-    <td>CS5000</td>
-    <td>Jose</td>
-    <td>10:05am</td>
-    <td><button>Delete</button></td>
-  </tr> <tr>
-    <td>CS4550</td>
-    <td>Jose</td>
-    <td>10:05am</td>
-    <td><button>Delete</button></td>
-  </tr>
-  <tr>
-    <td>CS5000</td>
-    <td>Jose</td>
-    <td>10:05am</td>
-    <td><button>Delete</button></td>
-  </tr>
-  <tr>
-    <td>CS4550</td>
-    <td>Jose</td>
-    <td>10:05am</td>
-    <td><button>Delete</button></td>
-  </tr>
-  <tr>
-    <td>CS5000</td>
-    <td>Jose</td>
-    <td>10:05am</td>
-    <td><button>Delete</button></td>
-  </tr> <tr>
-    <td>CS4550</td>
-    <td>Jose</td>
-    <td>10:05am</td>
-    <td><button>Delete</button></td>
-  </tr>
-  <tr>
-    <td>CS5000</td>
-    <td>Jose</td>
-    <td>10:05am</td>
-    <td><button>Delete</button></td>
-  </tr>
-  <tr>
-    <td>CS4550</td>
-    <td>Jose</td>
-    <td>10:05am</td>
-    <td><button>Delete</button></td>
-  </tr>
-  <tr>
-    <td>CS5000</td>
-    <td>Jose</td>
-    <td>10:05am</td>
-    <td><button>Delete</button></td>
-  </tr> <tr>
-    <td>CS4550</td>
-    <td>Jose</td>
-    <td>10:05am</td>
-    <td><button>Delete</button></td>
-  </tr>
-  <tr>
-    <td>CS5000</td>
-    <td>Jose</td>
-    <td>10:05am</td>
-    <td><button>Delete</button></td>
-  </tr>
-  <tr>
-    <td>CS4550</td>
-    <td>Jose</td>
-    <td>10:05am</td>
-    <td><button>Delete</button></td>
-  </tr>
-  <tr>
-    <td>CS5000</td>
-    <td>Jose</td>
-    <td>10:05am</td>
-    <td><button>Delete</button></td>
-  </tr> <tr>
-    <td>CS4550</td>
-    <td>Jose</td>
-    <td>10:05am</td>
-    <td><button>Delete</button></td>
-  </tr>
-  <tr>
-    <td>CS5000</td>
-    <td>Jose</td>
-    <td>10:05am</td>
-    <td><button>Delete</button></td>
-  </tr>
+<!--  Table row -->
+<tr>
+  <td>
+    <!--      File icon -->
+    <i class="fas fa-file-alt wbdv-file-icon-style" ></i>
+    <a href="../course-editor/course-editor.template.client.html"
+       class="wbdv-document-table-text-style wbdv-course-editor wbdv-close" >
+      CS4550
+    </a>
+  </td>
+  <td>me</td>
+  <td>6:45 PM</td>
+  <td><i class="fas fa-times"></i></td>
+</tr>
+<!--  Table row -->
+<tr>
+  <td>
+    <!--      File icon -->
+    <i class="fas fa-file-alt wbdv-file-icon-style" ></i>
+    <a href="../course-editor/course-editor.template.client.html"
+       class="wbdv-document-table-text-style wbdv-course-editor wbdv-close" >
+      CS4550
+    </a>
+  </td>
+  <td>me</td>
+  <td>6:45 PM</td>
+  <td><i class="fas fa-times"></i></td>
+  <!--  Table row -->
+<tr>
+  <td>
+    <!--      File icon -->
+    <i class="fas fa-file-alt wbdv-file-icon-style" ></i>
+    <a href="../course-editor/course-editor.template.client.html"
+       class="wbdv-document-table-text-style wbdv-course-editor wbdv-close" >
+      CS4550
+    </a>
+  </td>
+  <td>me</td>
+  <td>6:45 PM</td>
+  <td><i class="fas fa-times"></i></td>
+</tr>
+<!--  Table row -->
+<tr>
+  <td>
+    <!--      File icon -->
+    <i class="fas fa-file-alt wbdv-file-icon-style" ></i>
+    <a href="../course-editor/course-editor.template.client.html"
+       class="wbdv-document-table-text-style wbdv-course-editor wbdv-close" >
+      CS4550
+    </a>
+  </td>
+  <td>me</td>
+  <td>6:45 PM</td>
+  <td><i class="fas fa-times"></i></td>
+
+  <!--  Table row -->
+<tr>
+  <td>
+    <!--      File icon -->
+    <i class="fas fa-file-alt wbdv-file-icon-style" ></i>
+    <a href="../course-editor/course-editor.template.client.html"
+       class="wbdv-document-table-text-style wbdv-course-editor wbdv-close" >
+      CS4550
+    </a>
+  </td>
+  <td>me</td>
+  <td>6:45 PM</td>
+  <td><i class="fas fa-times"></i></td>
+</tr>
+<!--  Table row -->
+<tr>
+  <td>
+    <!--      File icon -->
+    <i class="fas fa-file-alt wbdv-file-icon-style" ></i>
+    <a href="../course-editor/course-editor.template.client.html"
+       class="wbdv-document-table-text-style wbdv-course-editor wbdv-close" >
+      CS4550
+    </a>
+  </td>
+  <td>me</td>
+  <td>6:45 PM</td>
+  <td><i class="fas fa-times"></i></td>
+
+  <!--  Table row -->
+<tr>
+  <td>
+    <!--      File icon -->
+    <i class="fas fa-file-alt wbdv-file-icon-style" ></i>
+    <a href="../course-editor/course-editor.template.client.html"
+       class="wbdv-document-table-text-style wbdv-course-editor wbdv-close" >
+      CS4550
+    </a>
+  </td>
+  <td>me</td>
+  <td>6:45 PM</td>
+  <td><i class="fas fa-times"></i></td>
+</tr>
+<!--  Table row -->
+<tr>
+  <td>
+    <!--      File icon -->
+    <i class="fas fa-file-alt wbdv-file-icon-style" ></i>
+    <a href="../course-editor/course-editor.template.client.html"
+       class="wbdv-document-table-text-style wbdv-course-editor wbdv-close" >
+      CS4550
+    </a>
+  </td>
+  <td>me</td>
+  <td>6:45 PM</td>
+  <td><i class="fas fa-times"></i></td>
+
+  <!--  Table row -->
+<tr>
+  <td>
+    <!--      File icon -->
+    <i class="fas fa-file-alt wbdv-file-icon-style" ></i>
+    <a href="../course-editor/course-editor.template.client.html"
+       class="wbdv-document-table-text-style wbdv-course-editor wbdv-close" >
+      CS4550
+    </a>
+  </td>
+  <td>me</td>
+  <td>6:45 PM</td>
+  <td><i class="fas fa-times"></i></td>
+</tr>
+<!--  Table row -->
+<tr>
+  <td>
+    <!--      File icon -->
+    <i class="fas fa-file-alt wbdv-file-icon-style" ></i>
+    <a href="../course-editor/course-editor.template.client.html"
+       class="wbdv-document-table-text-style wbdv-course-editor wbdv-close" >
+      CS4550
+    </a>
+  </td>
+  <td>me</td>
+  <td>6:45 PM</td>
+  <td><i class="fas fa-times"></i></td>
+
+  <!--  Table row -->
+<tr>
+  <td>
+    <!--      File icon -->
+    <i class="fas fa-file-alt wbdv-file-icon-style" ></i>
+    <a href="../course-editor/course-editor.template.client.html"
+       class="wbdv-document-table-text-style wbdv-course-editor wbdv-close" >
+      CS4550
+    </a>
+  </td>
+  <td>me</td>
+  <td>6:45 PM</td>
+  <td><i class="fas fa-times"></i></td>
+</tr>
+<!--  Table row -->
+<tr>
+  <td>
+    <!--      File icon -->
+    <i class="fas fa-file-alt wbdv-file-icon-style" ></i>
+    <a href="../course-editor/course-editor.template.client.html"
+       class="wbdv-document-table-text-style wbdv-course-editor wbdv-close" >
+      CS4550
+    </a>
+  </td>
+  <td>me</td>
+  <td>6:45 PM</td>
+  <td><i class="fas fa-times"></i></td>
+
+</tr><!--  Table row -->
+<tr>
+  <td>
+    <!--      File icon -->
+    <i class="fas fa-file-alt wbdv-file-icon-style" ></i>
+    <a href="../course-editor/course-editor.template.client.html"
+       class="wbdv-document-table-text-style wbdv-course-editor wbdv-close" >
+      CS4550
+    </a>
+  </td>
+  <td>me</td>
+  <td>6:45 PM</td>
+  <td><i class="fas fa-times"></i></td>
+</tr>
+<!--  Table row -->
+<tr>
+  <td>
+    <!--      File icon -->
+    <i class="fas fa-file-alt wbdv-file-icon-style" ></i>
+    <a href="../course-editor/course-editor.template.client.html"
+       class="wbdv-document-table-text-style wbdv-course-editor wbdv-close" >
+      CS4550
+    </a>
+  </td>
+  <td>me</td>
+  <td>6:45 PM</td>
+  <td><i class="fas fa-times"></i></td>
+</tr>
+<!--  Table row -->
+<tr>
+  <td>
+    <!--      File icon -->
+    <i class="fas fa-file-alt wbdv-file-icon-style" ></i>
+    <a href="../course-editor/course-editor.template.client.html"
+       class="wbdv-document-table-text-style wbdv-course-editor wbdv-close" >
+      CS4550
+    </a>
+  </td>
+  <td>me</td>
+  <td>6:45 PM</td>
+  <td><i class="fas fa-times"></i></td>
+</tr>
+<!--  Table row -->
+<tr>
+  <td>
+    <!--      File icon -->
+    <i class="fas fa-file-alt wbdv-file-icon-style" ></i>
+    <a href="../course-editor/course-editor.template.client.html"
+       class="wbdv-document-table-text-style wbdv-course-editor wbdv-close" >
+      CS4550
+    </a>
+  </td>
+  <td>me</td>
+  <td>6:45 PM</td>
+  <td><i class="fas fa-times"></i></td>
+</tr>
+<!--  Table row -->
+<tr>
+  <td>
+    <!--      File icon -->
+    <i class="fas fa-file-alt wbdv-file-icon-style" ></i>
+    <a href="../course-editor/course-editor.template.client.html"
+       class="wbdv-document-table-text-style wbdv-course-editor wbdv-close" >
+      CS4550
+    </a>
+  </td>
+  <td>me</td>
+  <td>6:45 PM</td>
+  <td><i class="fas fa-times"></i></td>
+</tr>
+<!--  Table row -->
+<tr>
+  <td>
+    <!--      File icon -->
+    <i class="fas fa-file-alt wbdv-file-icon-style" ></i>
+    <a href="../course-editor/course-editor.template.client.html"
+       class="wbdv-document-table-text-style wbdv-course-editor wbdv-close" >
+      CS4550
+    </a>
+  </td>
+  <td>me</td>
+  <td>6:45 PM</td>
+  <td><i class="fas fa-times"></i></td>
+</tr>
+
 
   </tbody>
 </table>

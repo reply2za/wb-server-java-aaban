@@ -24,24 +24,12 @@ body {
   padding-top: 100px;
 }
 
-.wbdv-sticky-header {
-  position: fixed;
-  background: cornflowerblue;
-  color: white;
-  top: 0;
-  left: 0;
-  right: 0;
-}
 
-.wbdv-padding-left-10px {
-  padding-left: 10px;
-}
 
-.wbdv-add-course-header-styling {
-  position: absolute;
-  right: 0px;
-  padding-top: 10px;
-  padding-right: 10px;
+.wbdv-padding-left-header {
+  padding-left: 36px;
+  padding-top: 15px;
+  color: lightgray;
 }
 
 .wbdv-file-icon-style {
@@ -52,4 +40,8 @@ body {
   color: darkred;
 }
 
+.wbdv-document-table-text-style {
+  color: black;
+  padding-left: 12px;
+}
 
