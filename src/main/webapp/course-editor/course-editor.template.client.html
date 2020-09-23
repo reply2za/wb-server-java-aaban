@@ -14,8 +14,8 @@
   <h1 class="wbdv-sticky-header" >
     <div class="form-group row">
       <!--  Menu bar-->
-      <i class="fas fa-times wbdv-padding-left-header"></i>
-      <label class="wbdv-header-menu-icon-text" >CS4550-WebDev</label>
+      <i class="fas fa-times wbdv-padding-left-header wbdv-course-editor wbdv-close"></i>
+      <label class="wbdv-header-menu-icon-text wbdv-course-title" >CS4550-WebDev</label>
       <!--    Navigation Bar-->
       <ul class="nav nav-pills wbdv-nav-heading-style" >
         <li class="nav-item">
@@ -27,7 +27,7 @@
       </ul>
       <!--  page icons -->
       <i class="wbdv-add-course-header-styling fas fa-plus wbdv-icon-align-right"></i>
-      <i class="wbdv-bottom-right-fixed fas fa-plus-circle wbdv-circle-add-style" ></i>
+      <i class="fas fa-plus-square wbdv-bottom-right-fixed wbdv-lesson-add-btn wbdv-module-item-add-btn" style="color:green"></i>
     </div>
   </h1>
 
@@ -35,12 +35,18 @@
   <div class="row">
     <div class="col-4 wbdv-left-content-pane-background">
       <ul class="list-group">
-        <li class="list-group-item wbdv-left-content-pane-boxes">Module 1 <i class="fas fa-times float-right"></i> </li>
-        <li class="list-group-item wbdv-left-content-pane-boxes">Module 2 <i class="fas fa-times float-right"></i></li>
-        <li class="list-group-item active wbdv-left-content-pane-boxes">Module 3 <i class="fas fa-times float-right"></i></li>
-        <li class="list-group-item wbdv-left-content-pane-boxes">Module 4 <i class="fas fa-times float-right"></i></li>
-        <li class="list-group-item wbdv-left-content-pane-boxes">Module 5 <i class="fas fa-times float-right"></i></li>
-        <li class="list-group-item wbdv-left-content-pane-boxes">Module 6 <i class="fas fa-times float-right"></i></li>
+        <li class="list-group-item wbdv-left-content-pane-boxes">Module 1
+          <i class="fas fa-times float-right wbdv-module-item-delete-btn"></i> </li>
+        <li class="list-group-item wbdv-left-content-pane-boxes">Module 2
+          <i class="fas fa-times float-right wbdv-module-item-delete-btn"></i></li>
+        <li class="list-group-item active wbdv-left-content-pane-boxes">Module 3
+          <i class="fas fa-times float-right wbdv-module-item-delete-btn"></i></li>
+        <li class="list-group-item wbdv-left-content-pane-boxes">Module 4
+          <i class="fas fa-times float-right wbdv-module-item-delete-btn"></i></li>
+        <li class="list-group-item wbdv-left-content-pane-boxes">Module 5
+          <i class="fas fa-times float-right wbdv-module-item-delete-btn"></i></li>
+        <li class="list-group-item wbdv-left-content-pane-boxes">Module 6
+          <i class="fas fa-times float-right wbdv-module-item-delete-btn"></i></li>
       </ul>
     </div>
 
@@ -48,59 +54,59 @@
     <div class="col-8">
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a href="#"  class="nav-link">Lesson 1</a>
+          <a href="#"  class="nav-link wbdv-lesson-tabs">Lesson 1</a>
         </li>
         <li class="nav-item">
-          <a href="#"  class="nav-link active">Lesson 2</a>
+          <a href="#"  class="nav-link active wbdv-lesson-tabs">Lesson 2</a>
         </li>
         <li class="nav-item">
-          <a href="#"  class="nav-link">Lesson 3</a>
+          <a href="#"  class="nav-link wbdv-lesson-tabs">Lesson 3</a>
         </li>
         <li class="nav-item">
-          <a href="#"  class="nav-link">Lesson 4</a>
+          <a href="#"  class="nav-link wbdv-lesson-tabs">Lesson 4</a>
         </li>
         <li class="nav-item">
-          <a href="#"  class="nav-link">Lesson 5</a>
+          <a href="#"  class="nav-link wbdv-lesson-tabs">Lesson 5</a>
         </li>
         <li class="nav-item">
-          <a href="#"  class="nav-link">Lesson 1</a>
+          <a href="#"  class="nav-link wbdv-lesson-tabs">Lesson 1</a>
         </li>
       </ul>
 
       <br/>
 
       <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a href="#"  class="nav-link">Topic 1</a>
+        <li class="nav-item wbdv-topic-pill-list">
+          <a href="#"  class="nav-link wbdv-topic-pill-list">Topic 1</a>
         </li>
         <li class="nav-item">
-          <a href="#"  class="nav-link active">Topic 2</a>
+          <a href="#"  class="nav-link active wbdv-topic-pill-list">Topic 2</a>
         </li>
         <li class="nav-item">
-          <a href="#"  class="nav-link">Topic 3</a>
+          <a href="#"  class="nav-link wbdv-topic-pill-list">Topic 3</a>
         </li>
         <li class="nav-item">
-          <a href="#"  class="nav-link">Topic 4</a>
+          <a href="#"  class="nav-link wbdv-topic-pill-list">Topic 4</a>
         </li>
         <li class="nav-item">
-          <a href="#"  class="nav-link">Topic 5</a>
+          <a href="#"  class="nav-link wbdv-topic-pill-list">Topic 5</a>
         </li>
         <li class="nav-item">
-          <a href="#"  class="nav-link">Topic 1</a>
+          <a href="#"  class="nav-link wbdv-topic-pill-list">Topic 1</a>
         </li>
       </ul>
 
       <br/>
 
       <div>
-        <h3>
+        <h3 class="wbdv-topic-pill">
           Heading Widget
           <span class="float-right">
                         <a class="btn btn-warning">
-                            <i class="fas fa-arrow-up"></i>
+                            <i class="fas fa-arrow-up wbdv-topic-pill"></i>
                         </a>
                         <a class="btn btn-warning">
-                            <i class="fas fa-arrow-down"></i>
+                            <i class="fas fa-arrow-down wbdv-topic-pill"></i>
                         </a>
                         <select>
                             <option>Heading</option>
@@ -109,7 +115,7 @@
                             <option>Document</option>
                             <option>Slides</option>
                         </select>
-                        <a class="btn btn-danger">Delete</a>
+                        <a class="btn btn-danger ">Delete</a>
                             </span>
         </h3>
 
