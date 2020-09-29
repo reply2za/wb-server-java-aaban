@@ -4,18 +4,21 @@
   let users = [
     {
       username: "alice",
+      password: "abcPass,",
       fName: "Alice",
       lName: "Wonderland",
       role: "STUDENT"
     },
     {
       username: "bob",
+      password: "abcPass",
       fName: "Bob",
       lName: "Marley",
       role: "STUDENT"
     },
     {
       username: "charlie",
+      password: "abcPass",
       fName: "Charlie",
       lName: "Garcia",
       role: "FACULTY"
@@ -23,7 +26,7 @@
   ]
 
   const onclickEventHandler = () => {
-    alert("heading clicked")
+    alert("Press 'home' to go to the landing page.")
   }
 
   const deleteUser = (event) => {
@@ -48,7 +51,7 @@
     })
   }
 
-  // remeber who the user is
+  // remember who the user is
   let selectedUserIndex = -1
   const selectUser = (index) => {
     selectedUserIndex = index
@@ -64,20 +67,30 @@
     for(let i=0; i<users.length; i++) {
       const user = users[i]
       const username = user.username
+      const pw = user.password
       const fName = user.first
       const lName = user.last
-      const role = user.role
+      const ro = user.role
 
       const $clone = $template.clone()
 
-      $clone.removeClass("wbdv-hidden")
+      //$clone.removeClass("wbdv-hidden")
 
       const $username = $clone.find(".wbdv-username")
       $username.html(username)
+
+      const $password = $clone.find(".wbdv-password")
+      $password.html(pw)
+
       const $firstName = $clone.find(".wbdv-first-name")
       $firstName.html(fName)
+
       const $lastName = $clone.find(".wbdv-last-name")
       $lastName.html(lName)
+
+      const $role = $clone.find(".wbdv-role")
+      $role.html(ro)
+
       const $removeBtn = $clone.find(".wbdv-remove")
       $removeBtn.click(() => deleteUser2(i))
       $clone
@@ -92,13 +105,18 @@
   const createUser = () => {
     // retrieve the value of the field, put it in a global constant
     const username = $("#usernameFld").val()
+    console.log(username)
+    const password = $("#passwordFld").val()
     const first = $("#firstNameFld").val()
     const last = $("#lastNameFld").val()
+    const role = $("div.container select").val()
 
     const newUser = {
       username,
       first,
-      last
+      password,
+      last,
+      role
     }
 
     userService.createUser(newUser)
@@ -115,12 +133,15 @@
     const updatedFields = {
       // grab the username field and read the value
       username: $("#usernameFld").val(),
-      first: $("#firstNameFld").val()
+      password: $("#passwordFld").val(),
+      first: $("#firstNameFld").val(),
+      last: $("#lastNameFld").val(),
+      role: $("#roleFId").val()
     }
     // process of telling the server about the updates to be made
     const userId = users[selectedUserIndex]._id
     userService.updateUser(userId, updatedFields)
-    .then(status => {
+    .then(() => {
       users[selectedUserIndex] = updatedFields
       renderUsers(users)
     })
@@ -128,11 +149,11 @@
 
   function init() {
     const heading1 = jQuery("h1")
-    // heading1.remove()
+    //inital styling can be put here
     heading1
-    .css("backgroundColor", "blue")
+    .css("backgroundColor", "#ffa6a6")
     .html("User Administration")
-    .append(" - for Administrators Only")
+    .append(" - For Administrators")
     .click(onclickEventHandler)
 
     $template = jQuery(".wbdv-template")

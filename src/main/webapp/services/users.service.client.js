@@ -1,4 +1,4 @@
-const url = 'https://wbdv-generic-server.herokuapp.com/api/jannunzi/users';
+const url = 'https://wbdv-generic-server.herokuapp.com/api/aaban-z/users';
 
 // actions for the server
 const userService = {
