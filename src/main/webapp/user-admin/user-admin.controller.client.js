@@ -115,8 +115,8 @@
 
     const newUser = {
       username,
-      first,
       password,
+      first,
       last,
       role
     }
