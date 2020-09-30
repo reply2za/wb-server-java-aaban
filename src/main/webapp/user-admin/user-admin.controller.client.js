@@ -57,6 +57,8 @@
     selectedUserIndex = index
     // grab the field that is the username
     $("#usernameFld").val(users[index].username)
+    $("#firstNameFld").val(users[index].first)
+    $("#lastNameFld").val(users[index].last)
   }
 
   let $template
