@@ -5,10 +5,13 @@ public class Widget {
   private String id;
   private String type; // the type of widget
   //private Integer widgetOrder;
-  //private String text;
+  private String text;
   private String src;
   private String html;
   private String className;
+
+
+  private String headingText;
   //private String style;
   private Integer height;
 
@@ -48,6 +51,22 @@ public class Widget {
     this.id = id;
   }
 
+  public String getHeadingText() {
+    return headingText;
+  }
+
+  public void setHeadingText(String headingText) {
+    this.headingText = headingText;
+  }
+
+
+  public String getText() {
+    return text;
+  }
+
+  public void setText(String text) {
+    this.text = text;
+  }
 
   public String getType() {
     return type;

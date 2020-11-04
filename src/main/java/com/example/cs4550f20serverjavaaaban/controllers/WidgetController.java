@@ -2,13 +2,10 @@ package com.example.cs4550f20serverjavaaaban.controllers;
 
 import com.example.cs4550f20serverjavaaaban.models.Widget;
 import com.example.cs4550f20serverjavaaaban.services.WidgetService;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -21,8 +18,13 @@ public class WidgetController {
   WidgetService service = new WidgetService();
 
   @GetMapping("/api/topics/{tid}/widgets")
-  public List<Widget> findWidgetsForTopic(@PathVariable("tid") String topicId) {
-    return service.findWidgetsForTopics(topicId);
+  public List<Widget> findAllWidgetsForTopic(@PathVariable("tid") String topicId) {
+    System.out.println("Topic id: " + topicId);
+    return service.findAllWidgetsForTopic(topicId);
+  }
+  @GetMapping("/api/topics/{tid}/widgets/{wid}")
+  public List<Widget> findWidgetForTopic(@PathVariable("tid") String topicId, @PathVariable("wid") String widgetId) {
+    return service.findWidgetForTopic(topicId, widgetId);
   }
 
   @GetMapping("/api/widgets")
@@ -42,6 +44,10 @@ public class WidgetController {
 
   @PostMapping("/api/topics/{tid}/widgets")
   public Widget createWidgetForTopic(@PathVariable("tid") String topicId,@RequestBody Widget widget) {
+    if (topicId.equalsIgnoreCase("undefined")) {
+      System.out.println("No topic id");
+      return new Widget();
+    }
     widget.setTopicId(topicId);
     return service.createWidget(topicId, widget);
   }
@@ -52,14 +58,14 @@ public class WidgetController {
     return service.createWidget(topicId, widget);
   }
 
-  @DeleteMapping("/api/widgets/{wid}")
-  public Integer deleteWidget(String widgetId) {
-    return null;
+  @DeleteMapping("/api/topics/{tid}/widgets/{wid}")
+  public Widget deleteWidget(@PathVariable("wid") String widgetId) {
+    return service.deleteWidget(widgetId);
   }
 
-  @PutMapping("/api/widgets/{wid}")
-  public Integer updateWidget(String widgetId, Widget newWidget) {
-    return null;
+  @PutMapping("/api/topics/{tid}/widgets/{wid}")
+  public Widget updateWidget(@PathVariable("wid") String widgetId, @RequestBody Widget newWidget) {
+    return service.updateWidget(widgetId, newWidget);
   }
   // TODO: deleteWidget(), updateWidget()
 }
