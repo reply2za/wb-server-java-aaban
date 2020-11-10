@@ -1,28 +1,37 @@
 package com.example.cs4550f20serverjavaaaban.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name= "widgets")
 public class Widget {
-  private String name;
-  private String id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Integer id;
   private String type; // the type of widget
+  private String name;
   //private Integer widgetOrder;
-  private String text;
   private String src;
   private String html;
   private String className;
-
-
+  private Integer height;
+  private Integer width;
+  private String topicId;
+  private String text;
   private String headingText;
   //private String style;
-  private Integer height;
 
-  public Widget(String id, String type, String name, String topicId) {
+  public Widget(Integer id, String type, String name, String topicId) {
     this.name = name;
     this.id = id;
     this.type = type;
     this.topicId = topicId;
   }
 
-  private Integer width;
 
   public String getTopicId() {
     return topicId;
@@ -32,9 +41,8 @@ public class Widget {
     this.topicId = topicId;
   }
 
-  private String topicId;
 
-  public Widget(String id, String type, String name) {
+  public Widget(Integer id, String type, String name) {
     this.id = id;
     this.type = type;
     this.name = name;
@@ -43,11 +51,11 @@ public class Widget {
   public Widget() {
   }
 
-  public String getId() {
+  public Integer getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(Integer id) {
     this.id = id;
   }
 
@@ -123,4 +131,5 @@ public class Widget {
   public void setWidth(Integer width) {
     this.width = width;
   }
+
 }
